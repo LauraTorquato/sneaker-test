@@ -1,13 +1,197 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
 
 :root {
+    --primary-color: #fff;
+    --ligth-gray: #f6f6f6;
+    --gray: #cccccc;
+
     --main-font: 'Montserrat', sans-serif;
 }
 
 * {
     margin: 0;
     padding: 0;
-    font-family: var(--main-font);
+    font-family: var(--main-font);  
+}
+
+.cupom_gif {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        width: 88.75%;
+        display: flex;
+        justify-content: center;
+        transform: scale(1.25);
+        overflow-x: hidden;
+    }
+}
+
+.cupom_gif img {
+    height: 29.5px;
+}
+
+.primary_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    font-size: 11px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--gray);
+}
+
+.dafiti_logo {
+    width: 240px;
+}
+
+.dafiti_logo img {
+    width: 92px;
+    height: 32px;
+}
+
+.header_right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 700px;
+}
+
+.search_input {
+    width: 400px;
+    display: flex;
+    align-items: center;
+}
+
+input {
+    width: 380px;
+    height: 26px;
+    font-size: 12px;
+    border: 1px solid var(--gray);
+    outline: none;
+    background-color: var(--ligth-gray);
+
+    &::placeholder {
+        padding: 5px;
+    }
+}
+
+.search_button { 
+    width: 38px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(177, 176, 176);
+}
+
+.search_icon {
+    width: 14px;
+    height: 14px;
+}
+
+.header_quick_links {
+    display: flex;
+    justify-content: space-between;
+    width: 220px;
+    height: 34px;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+}
+
+.header_quick_links a {
+    text-decoration: none;
+    color: black;
+}
+
+.arrow_icon {
+    width: 7px;
+    height: 7px;
+}
+
+.quick_links {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 111px;
+}
+
+.quick_links img {
+    width: 22px;
+    height: 22px;
+}
+
+.nav_list {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    font-size: 11px;
+    border-bottom: 1px solid var(--gray);
+
+    &:hover {
+        text-decoration: underline;
+        font-weight: 400;
+        color: black;
+    }
+}
+
+.nav_list ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 940px;
+    list-style-type: none;
+    font-size: 13px;
+}
+
+.nav_list a {
+    list-style-type: none;
+    text-decoration: none;
+    font-weight: 400;
+    color: black;
+}
+
+.help_center {
+    width: 100%;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e9e9e9;
+}
+
+.help_center ul {
+    width: 960px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    padding: 7px 10px;
+}
+
+.help_center img {
+    width: 17px;
+    height: 17px;
+    margin-right: 9px;
+}
+
+.help_center a {
+    color: #333333;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
 }
 
 .principal_banner  {
@@ -16,9 +200,13 @@
     align-items: center;
 }
 
-.principal_banner img {
+.desktop {
     width: 100%;
     height: 100%;
+}
+
+.mobile {
+    display: none;
 }
 
 .brands {
@@ -48,6 +236,7 @@
     justify-content: center;
     align-items: center;
     gap: 25px;
+    width: 100%;
     padding-top: 20px;
 }
 
@@ -108,13 +297,31 @@
     align-items: center;
 }
 
+@media (max-width: 768px) {
+    .primary_header {
+        flex-direction: column;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
 @media (max-width: 1200px) {
     .list_of_brands {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .other_brands {
         flex-direction: column;
         align-items: center;
+        gap: 20px;
     }
 }
+
