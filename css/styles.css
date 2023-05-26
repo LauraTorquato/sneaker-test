@@ -14,23 +14,14 @@
     font-family: var(--main-font);  
 }
 
-.cupom_gif {
+.header_menu {
     width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-
-    &:hover {
-        width: 88.75%;
-        display: flex;
-        justify-content: center;
-        transform: scale(1.25);
-        overflow-x: hidden;
-    }
-}
-
-.cupom_gif img {
-    height: 29.5px;
+    justify-content: center;
+    position: fixed;
+    background-color: var(--primary-color);
 }
 
 .primary_header {
@@ -297,9 +288,155 @@ input {
     align-items: center;
 }
 
-@media (max-width: 768px) {
+.footer_informations {
+    width: 100%;
+    height: 24px;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    border-top: 1px solid var(--gray);
+}
+
+.all_informations {
+    width: 750px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.payment_method {
+    width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.payment_method img {
+    width: 36px;
+    height: 22px;
+}
+
+.gfg_logo img {
+    width: 71px;
+    height: 20px;
+}
+
+.footer_international {
+    width: 302px;
+    display: flex;
+}
+
+.footer_international p {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.other_countries {
+   width: 100px; 
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   list-style-type: none;
+}
+
+.other_countries img {
+    width: 24px;
+    height: 15px;
+}
+
+.licenses {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.licenses p {
+    font-size: 10px;
+    font-weight: bold;
+    color: #85858585;
+}
+
+.security {
+    width: 924px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12px;
+    border-top: 1px solid var(--gray);
+}
+
+.certificates {
+    display: flex;
+}
+
+.certificates p {
+    font-size: 11px;
+    font-weight: bold;
+    color: black;
+}
+
+.certificates_links { 
+    width: 392px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+} 
+
+.footer-about-dafiti {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-about-dafiti {
+    border-top: 1px solid var(--gray);
+    padding: 10px 0 5px 0;
+}
+
+.dades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 10px;
+    color: #ADADAD;
+}
+
+.dades a {
+    text-decoration: none;
+    color: #ADADAD;
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
     .primary_header {
         flex-direction: column;
+        margin-top: 0;
+        height: 116px;
+    }
+
+    .dafiti_logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .header_right {
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+    .nav_list {
+        height: 58px;
+    }
+
+    .nav_list ul {
+        padding: 0 10px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
     }
 
     .desktop {
@@ -310,12 +447,70 @@ input {
         display: flex;
         justify-content: center;
         width: 100%;
+        margin-top: 122px;
+    }
+
+    .list_of_brands {
+        display: grid;
+        grid-template-columns: repeat(4, 0fr);
+    }
+
+    .security {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .certificates {
+        padding-top: 20px;
     }
 }
 
-@media (max-width: 1200px) {
-    .list_of_brands {
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+    .primary_header {
         flex-direction: column;
+        margin-top: 0;
+        height: 106px;
+    }
+
+    .dafiti_logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .header_right {
+        align-items: center;
+    }
+
+    .nav_list ul {
+        padding: 0 10px;
+    }
+
+    .desktop {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 122px;
+    }
+    
+    .mobile {
+        display: none;
+    }
+
+    .security {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .certificates {
+        padding-top: 20px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .list_of_brands {
+        display: grid;
+        grid-template-columns: repeat(6, 0fr);
     }
 
     .other_brands {
