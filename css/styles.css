@@ -216,10 +216,6 @@ input {
 
 .img_description {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     background: rgba(0, 0, 0, 0.75);
     color: #fff;
     visibility: hidden;
@@ -381,6 +377,115 @@ input {
     color: var(--middel-gray);
 }
 
+@media screen and (min-width: 359px) and (max-width: 480px) {
+    .header_menu {
+        z-index: 1;
+    }
+
+    .primary_header {
+        flex-direction: column;
+        margin-top: 0;
+        height: 116px;
+    }
+
+    .dafiti_logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .header_right {
+        align-items: center;
+        flex-direction: column-reverse;
+        width: 400px;
+    }
+
+    .search_input {
+        width: 260px;
+    }
+
+    .nav_list {
+        height: 58px;
+    }
+
+    .nav_list ul {
+        padding: 0 10px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 182px;
+    }
+
+    .list_of_brands {
+        display: grid;
+        grid-template-columns: repeat(4, 0fr);
+    }
+
+    .list_of_brands img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .two_brands img {
+        width: 320px;
+    }
+
+    .converse img {
+        width: 320px;
+    }
+
+    .img_description {
+        bottom: 250px;
+    } 
+        
+    .img_title {
+        font-size: 14px;
+    }
+    
+    .img_paragraph {
+        font-size: 12px;
+        text-decoration: none;
+    }
+
+    .all_informations {
+        justify-content: center;
+    }
+
+    .security {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .certificates {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+
+    }
+
+    .certificates_links img {
+        width: 65px;
+    }
+
+    .dades {
+        width: 400px;
+    }
+}
+
+
+
 @media screen and (min-width: 481px) and (max-width: 768px) {
     .header_menu {
         z-index: 1;
@@ -437,6 +542,19 @@ input {
 
     .converse img {
         width: 400px;
+    }
+
+    .img_description {
+        bottom: 250px;
+    }
+
+    .img_title {
+        font-size: 14px;
+    }
+    
+    .img_paragraph {
+        font-size: 12px;
+        text-decoration: none;
     }
 
     .all_informations {
